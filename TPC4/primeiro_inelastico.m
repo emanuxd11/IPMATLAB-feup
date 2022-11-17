@@ -1,17 +1,17 @@
 clear; clc;
 
-ITERATIONS = 5000;                                       % número de iterações
-X_MIN = 0; X_MAX = 10;                                   % domínio de x
-Y_MIN = 0; Y_MAX = 10;                                   % domínio de y
+ITERATIONS = 50;                                         % numero de iterações
+X_MIN = 0; X_MAX = 10;                                   % dominio de x
+Y_MIN = 0; Y_MAX = 10;                                   % dominio de y
 SPEED = 10;                                              % velocidade
 LOST_PERCENTAGE = 50;                                    % percentagem removida
-                                                         % à velocidade em cada
+                                                         % 'a velocidade em cada
                                                          % embate
 
-x = zeros(1, ITERATIONS); y = zeros(1,ITERATIONS);       % posição
-x(1) = 5; y(1) = 5;                                      % posição inicial
+x = zeros(1, ITERATIONS); y = zeros(1,ITERATIONS);       % posicao
+x(1) = 5; y(1) = 5;                                      % posicao inicial
 v_x = zeros(1, ITERATIONS); v_y = zeros(1,ITERATIONS);   % velocidade
-v_x(1) = 0; v_y(1) = 0;                                  % velocidade inicial
+v_x(1) = 2; v_y(1) = 0;                                  % velocidade inicial
 accel_x = 0; accel_y = -1;
 
 clf; figure(1);
