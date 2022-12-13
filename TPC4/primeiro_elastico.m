@@ -6,9 +6,9 @@ Y_MIN = 0; Y_MAX = 10;                                 % domínio de y
 SPEED = 10;                                            % velocidade
 
 x = zeros(1, ITERATIONS); y = zeros(1,ITERATIONS);      % posição
-x(1) = 5; y(1) = 5;                                    % posição inicial
+x(1) = 5; y(1) = 3;                                    % posição inicial
 v_x = zeros(1, ITERATIONS); v_y = zeros(1,ITERATIONS);  % velocidade
-v_x(1) = 1; v_y(1) = 1;                                % velocidade inicial
+v_x(1) = 2; v_y(1) = 0;                                % velocidade inicial
 accel_x = 0; accel_y = -1;
 
 clf; figure(1);
@@ -20,11 +20,11 @@ for i = 2:ITERATIONS
     if x(i) < X_MIN
         x(i) = -x(i);
         v_x(i) = -v_x(i - 1);
-        v_y(i - 1) = v_y(i - 1);
+        v_y(i) = v_y(i - 1);
     elseif x(i) > X_MAX
         x(i) = X_MAX * 2 - x(i);
         v_x(i) = -v_x(i - 1);
-        v_y(i) = v_y(i);
+        v_y(i) = v_y(i - 1);
     elseif y(i) < Y_MIN
         y(i) = -y(i);
         v_x(i) = v_x(i - 1);
