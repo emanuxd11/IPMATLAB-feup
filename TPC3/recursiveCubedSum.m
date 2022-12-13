@@ -10,4 +10,6 @@ function sum = recursiveCubedSum(n)
     sum = n.^3;
     sum += recursiveCubedSum(n -1);
   endif
+end
 
+recursiveCubedSum(5)
